@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.blueprint {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.blueprint-left {
+    width: 45%;
+    background: linear-gradient(90deg, #020024 0%, #0d1387 0%, #005aff 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blueprint-right {
+    background: linear-gradient(90deg, #020024 0%, #acacac 0%, #c0c0c0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+}
+
+.logo img {
+    max-width: 150px;
+    top: 10px;
+    left: 40px;
+    position: fixed;
+}
+
+.contact {
+    margin: 50px;
+    color: white;
+}
+
+i {
+    font-size: 25px;
+    line-height: 5;
+    margin-right: 20px;
+}
+i{
+    color: white;
+}
+i:hover {
+    color: black;
+}
+
+.about {
+    color: #28282B;
+    width: 400px;
+    line-height: 25px;
+    margin-left: 300px;
+    font-size: large;
+    font-weight: 540;
+}
+
+.about p {
+    margin-bottom: -15px;
+}
+
+.name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.image {
+    width: 640px;
+    position: absolute;
+    top: 80px;
+    left: 400px;
+    box-shadow: inset 5px 5px 5px 0 #666666;
+}
+
+.Burger-Menu {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  .toggler{
+    z-index: 20;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 55px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  .burger {
+    position: relative;
+    top: 55px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    z-index: 19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .burger > div {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: black;
+    height: 2px;
+    width: 30px;
+    transition: all 0.4s ease;
+  }
+  
+  .burger > div::before,
+  .burger > div::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    background: black;
+    width: 30px;
+    height: 2px;
+    transition: all 0.4s ease;
+  }
+  
+  .burger > div::after {
+    top: 0;
+  }
+  
+    /* .toggler:checked + .burger > div {
+        background: #28282B;
+    } */
+  
+  .toggler:checked + .burger > div::before {
+    top: 0;
+    transform: rotate(-45deg);
+    background: white;
+  }
+  
+  .toggler:checked + .burger > div::after {
+    top: 0;
+    transform: rotate(-135deg);
+    background: white;
+  }
+  
+  .Menu {
+    background: linear-gradient(
+      90deg,
+      #181818 0%,
+      #111111 50%,
+      #0d0d0d 95%,
+      #090909 100%
+    );
+    width: 0;
+    height: 200px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    transition: all 0.8s ease;
+  }
+  
+  .nav {
+    overflow: hidden;
+  }
+  
+  .toggler:checked ~ .Menu {
+    width: 14%;
+  }
+  
+  .Menu > div > ul {
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    visibility: hidden;
+  }
+  
+  .Menu > div > ul > li {
+    list-style: none;
+    padding: 0.5rem;
+    padding-left: 10px;
+  }
+  
+  .Menu > div > ul > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  
+  .toggler:checked ~ .Menu > div > ul {
+    transition: visibility 0.4s ease;
+    transition-delay: 0.1s;
+    visibility: visible;
+  }
+  
+  .toggler ~ .Menu > div > ul {
+    transition: visibility 0.4s ease;
+    transition-delay: 0.1s;
+    visibility: hidden;
+  }
+  
+  .toggler:checked ~ .Menu > div > ul > li > a:hover {
+    color: blue;
+    transform: rotate(360deg);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
